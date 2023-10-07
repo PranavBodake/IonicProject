@@ -1,0 +1,34 @@
+<ion-header >
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Recycle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list color="success">
+    <ion-item color="success">
+      <ion-avatar slot="start">
+        <img src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png">
+      </ion-avatar>
+      <ion-label>
+        <h1>Collector</h1>
+        <p>Gathered: <span class="money">₹ 1500</span> </p>
+      </ion-label>
+  </ion-item>
+</ion-list>
+
+<app-pickup-call-card> </app-pickup-call-card>
+
+<!-- <app-pickup-call-card [hasHeader]="true", [hasFooter]="true"> </app-pickup-call-card> -->
+
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button color="success">
+    <ion-icon name="add" (click)="pickup()"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+</ion-content>
