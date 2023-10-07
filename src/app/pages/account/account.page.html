@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-item lines="none">
+      <ion-label color="primary">
+        Pranav Bodake
+        <p>
+          <ion-text color="dark">
+            pvb@gmail.com | +91 9874563210
+          </ion-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-list lines="none">
+    <ion-item class="ion-margin-bottom" [detail]="true" *ngFor="let item of options">
+      <ion-avatar slot="start" class="ion-text-center">
+        <img *ngIf="item?.img" [src]="'assets/imgs/' + item?.img">
+        <ion-icon *ngIf="item?.icon" [name]="item?.icon" [color]="item?.color || 'dark'"></ion-icon>
+      </ion-avatar>
+      <ion-label>{{item?.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+<ion-button color="danger" fill="clear" size="full" (click)="onLogout()"[routerLink]="['/login']">Logout</ion-button>
+
+</ion-content>
